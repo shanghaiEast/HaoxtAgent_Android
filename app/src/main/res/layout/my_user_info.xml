@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activity_page">
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:background="#EF5F48"
+        android:id="@+id/titlebar_mypos_info">
+
+        <ImageButton style="@style/topbar_return_img"
+            android:onClick="onReturnClick"/>
+
+        <TextView
+            style="@style/topbar_title"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:text="商户信息" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        style="@style/ll_vertical_match_match"
+        android:layout_weight="1">
+
+        <LinearLayout style="@style/ll_vertical_match_match">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="26dp"
+                android:paddingBottom="21dp"
+                android:paddingLeft="22dp"
+                android:background="@drawable/my_header_backgroud"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/my_header_img2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/user_logo" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="商户名称："
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/tx_my_merchant_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:text="五粮液股份有限公司"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_toRightOf="@+id/my_header_img2"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_my_merchant_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="上海市浦东新区灵岩南路"
+                            android:textColor="#FFFFFF"
+                            android:textSize="19sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+            <LinearLayout
+                android:id="@+id/llCreditCardAuth"
+                style="@style/content_item_white">
+
+                <TextView
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:text="商户编号" />
+
+                <TextView
+                    android:id="@+id/tv_myuser_merchant_no"
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="信用卡认证" />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+            <LinearLayout
+                android:id="@+id/llPOSApply"
+                style="@style/content_item_white">
+
+                <TextView
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:text="联系人" />
+
+                <TextView
+                    android:id="@+id/tv_myuser_merchant_contacts"
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="张三" />
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+            <LinearLayout
+                android:id="@+id/llCustomerServiceOnline"
+                style="@style/content_item_white">
+
+                <TextView
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:text="电话号码" />
+
+                <TextView
+                    android:id="@+id/tv_myuser_merchant_number"
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="18017883972" />
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+            <LinearLayout
+                style="@style/content_item_white">
+
+                <TextView
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:text="开通日期" />
+
+                <TextView
+                    android:id="@+id/tv_myuser_merchant_opentime"
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="2018-07-30" />
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+            <LinearLayout
+                style="@style/content_item_white">
+
+                <TextView
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:text="商户状态" />
+
+                <TextView
+                    android:id="@+id/tv_myuser_merchant_status"
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="2018-07-30" />
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+            <LinearLayout
+                style="@style/content_item_white">
+
+                <TextView
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:text="借记卡费率" />
+
+                <TextView
+                    android:id="@+id/tv_myuser_merchant_debit_rate"
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="0.5%" />
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+            <LinearLayout
+                style="@style/content_item_white">
+
+                <TextView
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:text="贷记卡D0" />
+
+                <TextView
+                    android:id="@+id/tv_myuser_merchant_credit_rate"
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="0.5%" />
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+            <LinearLayout
+                style="@style/content_item_white">
+
+                <TextView
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="3dp"
+                    android:text="二维码/闪付" />
+
+                <TextView
+                    android:id="@+id/tv_myuser_merchant_qrcode_rate"
+                    style="@style/content_item_lf_tv"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="2018-07-30" />
+
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_1px" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

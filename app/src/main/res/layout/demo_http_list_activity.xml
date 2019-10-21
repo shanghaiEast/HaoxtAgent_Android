@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llDemoRoot"
+    style="@style/activity_page" >
+
+    <RelativeLayout style="@style/topbar_bg" >
+
+        <ImageButton style="@style/topbar_return_img" />
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="我的结算卡" />
+
+    </RelativeLayout>
+
+
+    <!-- BaseHttpRecyclerXXX的子类布局layout中，SmartRefreshLayout和RecyclerView必须有，且它们的id必须按以下写法 -->
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/match_match"
+        android:id="@id/srlBaseHttpList"
+        app:srlEnableLoadmore="true"
+        app:srlEnablePreviewInEditMode="true"
+        >
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            style="@style/match_wrap"
+            />
+
+        <ListView
+            android:id="@id/lvBaseList"
+            style="@style/lv"
+            />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            style="@style/match_wrap"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_marginTop="24dp">-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_update_phone"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@drawable/selector_btn_red"-->
+            <!--android:text="确定"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="15sp" />-->
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

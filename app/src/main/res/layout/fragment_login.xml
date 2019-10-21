@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/welcome_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_75"
+        android:text="@string/welcome"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_28"
+        android:textStyle="bold"
+        tools:ignore="RelativeOverlap" />
+
+    <ImageView
+        android:id="@+id/logo_iv"
+        android:layout_width="@dimen/dimen_36"
+        android:layout_height="@dimen/dimen_36"
+        android:layout_marginTop="@dimen/dimen_75"
+        android:layout_marginRight="@dimen/dimen_11"
+        android:layout_toLeftOf="@+id/welcome_tv"
+        android:padding="@dimen/dimen_2"
+        android:src="@mipmap/logo" />
+
+    <TextView
+        android:id="@+id/number_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_iv"
+        android:layout_alignLeft="@+id/logo_iv"
+        android:layout_marginTop="@dimen/dimen_54"
+        android:text="@string/phone_number"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_14"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/login_number_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/number_tv"
+        android:layout_alignLeft="@+id/number_tv"
+        android:layout_marginTop="@dimen/dimen_17"
+        android:layout_marginRight="@dimen/dimen_50"
+        android:background="@drawable/et_bg"
+        android:hint="@string/hint_number"
+        android:inputType="number"
+        android:lineSpacingExtra="@dimen/dimen_13"
+        android:maxLines="@integer/int_1"
+        android:textSize="@dimen/font_12" />
+
+    <TextView
+        android:id="@+id/login_password_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_number_et"
+        android:layout_alignLeft="@+id/login_number_et"
+        android:layout_marginTop="@dimen/dimen_28"
+        android:text="@string/password"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_14"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/login_password_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password_tv"
+        android:layout_alignLeft="@+id/login_password_tv"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:layout_marginRight="@dimen/dimen_50">
+
+        <EditText
+            android:id="@+id/login_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/et_bg"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:maxLines="@integer/int_1"
+            android:textSize="@dimen/font_12" />
+
+        <CheckBox
+            android:id="@+id/show_password_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/show_password" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/login_rm_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_password_rl"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp">
+
+        <CheckBox
+            android:id="@+id/login_remember_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="记住密码"
+            android:textColor="#FF959DAA"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/login_forget_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="忘记密码"
+            android:textColor="#FF959DAA"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+
+
+
+    <!--<CheckBox-->
+        <!--android:id="@+id/login_remember_pwd"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="303dp"-->
+        <!--android:button="@drawable/check_box"-->
+        <!--android:text="@string/remember_password"-->
+        <!--android:textColor="@color/text_color"-->
+        <!--android:textSize="@dimen/font_12" />-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/login_forget_tv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignTop="@+id/login_remember_pwd"-->
+        <!--android:layout_toEndOf="@+id/welcome_tv"-->
+        <!--android:text="@string/forget_password"-->
+        <!--android:textColor="@color/text_color"-->
+        <!--android:textSize="@dimen/font_12" />-->
+
+    <Button
+        android:id="@+id/login_login_bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_51"
+        android:layout_below="@+id/login_rm_rl"
+        android:layout_marginHorizontal="@dimen/dimen_50"
+        android:layout_marginTop="@dimen/dimen_51"
+        android:background="@drawable/button_bg"
+        android:text="@string/login"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_15" />
+
+    <TextView
+        android:id="@+id/login_register_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_login_bt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_28"
+        android:text="@string/register_account"
+        android:textColor="@color/et_line_color"
+        android:textSize="@dimen/font_14" />
+
+</RelativeLayout>

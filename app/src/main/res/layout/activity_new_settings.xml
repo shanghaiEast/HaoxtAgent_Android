@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:commonTitleBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/panel_bg"
+    style="@style/activity_page"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:id="@+id/titlebar_my_setting"
+        >
+
+        <ImageButton style="@style/topbar_return_img1"
+            android:onClick="onReturnClick"/>
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="设置" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_password_management"
+                    style="@style/myAccount_items_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="13dp"
+                    android:paddingLeft="15dp"
+                    android:text="修改密码" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@color/bg" />
+
+                <TextView
+                    android:id="@+id/tv_update_phone"
+                    style="@style/myAccount_items_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text="修改手机号" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginBottom="13dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@color/bg" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_new_version_update"
+                    style="@style/settings_items"
+                    android:layout_width="match_parent">
+
+                    <TextView
+                        style="@style/settings_items_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:drawableRight="@drawable/right32"
+                        android:text="版本号" />
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="30dp"
+                        android:padding="5dp"
+                        android:text="---"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="13dp"
+                    android:background="@color/bg" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_quit"
+                style="@style/settings_items_text"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="100dp"
+                android:background="@drawable/selector_settings_item_click"
+                android:gravity="center"
+                android:paddingRight="15dp"
+                android:text="退出登录" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

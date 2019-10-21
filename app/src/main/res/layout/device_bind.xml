@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/activity_page"
+    >
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:id="@+id/titlebar_bindpos"
+        >
+
+        <ImageButton style="@style/topbar_return_img1" />
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="绑定终端" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bind_terminal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar_bindpos"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/bindpos_gif"
+            android:layout_width="@dimen/dimen_200"
+            android:layout_height="@dimen/dimen_200"
+            android:layout_gravity="center"
+            android:src="@drawable/search_pos"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="请连接刷卡器"
+            android:textStyle="bold"
+            android:textColor="@color/color_464C55"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/ll_bind_terminal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/lv_device_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="200dp"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+
+            <!--<ImageView-->
+                <!--android:id="@+id/iv_no_device"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:src="@drawable/pic_search2x"-->
+                <!--android:visibility="gone" />-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="蓝牙设备搜索结束，如未发现设备"
+            android:textColor="@color/color_959DAA"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/bind_terminal"
+            android:textColor="@color/color_959DAA"
+            android:textSize="13sp" />
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_search"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="45dp"-->
+            <!--android:layout_margin="30dp"-->
+            <!--android:background="@drawable/btn_corner_next_step"-->
+            <!--android:text="停止搜索"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:textSize="15sp"-->
+            <!--android:visibility="invisible" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>

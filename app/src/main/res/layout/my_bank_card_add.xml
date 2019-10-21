@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/activity_page"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:id="@+id/titlebar_credit_card_add"
+        >
+
+        <ImageButton style="@style/topbar_return_img1"
+            android:onClick="onReturnClick"/>
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="结算卡信息" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar_credit_card_add">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="42dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="18dp"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:layout_marginRight="13dp"-->
+                <!--android:background="@drawable/authenticate_progress_card"-->
+                <!--/>-->
+
+            <!--<View style="@style/divider_horizontal_item_line" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="18dp"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请扫描银行卡的照片"
+                    android:textSize="19sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#F5F6FA"
+                android:padding="15dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#F5F6FA"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:text="银行卡照片" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="#5D5D5D"
+                        android:text="上传您银行卡照片" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btn_real_name_auth_debit_card_side"
+                    android:layout_width="168dp"
+                    android:layout_height="108dp"
+                    android:background="@drawable/real_name_auth_debit_card_side"
+                    android:layout_weight="2"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+                android:paddingTop="13dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="账户名称"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/real_name_auth_debit_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="王大锤"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#999999"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_item_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="结算账户"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/real_name_auth_debit_card_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="310123123123123"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#999999"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_item_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开户总行"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/real_name_auth_debit_card_openbank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请查询开户总行"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#999999"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    />
+
+                <ImageView style="@style/content_item_rt_img" />
+
+
+                <!--<EditText-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="王大锤"-->
+                <!--android:textSize="16sp"-->
+                <!--android:gravity="center_vertical|right"-->
+                <!--android:textColor="#999999"-->
+                <!--android:layout_weight="3"-->
+                />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_item_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开户地区"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/real_name_auth_debicard_idcard_area"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="点击获取开户地区"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#999999"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    />
+
+                <ImageView style="@style/content_item_rt_img" />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_item_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="开户支行"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <TextView
+                    android:id="@+id/real_name_auth_debicard_subbranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="310123123123123"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#999999"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    />
+
+                <ImageView style="@style/content_item_rt_img" />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_item_line" />
+
+            <Button
+                android:id="@+id/btn_add_bank_msg_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_alignParentBottom="true"
+                style="@style/btn_next_style_red"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

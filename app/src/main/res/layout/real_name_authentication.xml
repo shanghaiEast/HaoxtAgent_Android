@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/activity_page"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:id="@+id/titlebar_realname"
+        >
+
+        <ImageButton style="@style/topbar_return_img1" />
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="身份证信息" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:id="@+id/sl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titlebar_realname">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:orientation="vertical">
+
+
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_marginTop="18dp"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:layout_marginRight="13dp"-->
+                <!--android:background="@drawable/authenticate_progress_card"-->
+                <!--/>-->
+
+            <!--<View style="@style/divider_horizontal_item_line" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="18dp"
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请扫描身份证的正反面"
+                    android:textSize="19sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="正面为国徽，反面为头像"
+                    android:textColor="@color/color_FF6363"
+                    android:layout_marginTop="9dp"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#F5F6FA"
+                android:padding="15dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#F5F6FA"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:text="头像面" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="#5D5D5D"
+                        android:text="上传您身份证头像面" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/btn_real_name_auth_id_card_side"
+                    android:layout_width="168dp"
+                    android:layout_height="108dp"
+                    android:background="@drawable/real_name_auth_id_card_side"
+                    android:layout_weight="2"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#F5F6FA"
+                android:padding="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#F5F6FA"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#333333"
+                        android:text="国徽面" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textColor="#5D5D5D"
+                        android:text="上传您身份证国徽面" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/btn_real_name_auth_id_card_front"
+                    android:layout_width="168dp"
+                    android:layout_height="108dp"
+                    android:background="@drawable/real_name_auth_id_card_front"
+                    android:layout_weight="2"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+                android:paddingTop="13dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/real_name_auth_idcard_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="王大锤"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#999999"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_item_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号码"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/real_name_auth_idcard_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="310123123123123"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#999999"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginTop="13dp"
+                android:background="#FAFAFA"
+                android:layout_height="4dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证是否长期"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/radio_group"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/real_name_auth_idcard_rdb1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/color_FE4049"
+                        android:checked="true"
+                        android:text="是"/>
+
+                    <RadioButton
+                        android:id="@+id/real_name_auth_idcard_rdb2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/color_FE4049"
+                        android:text="否"/>
+
+
+                </RadioGroup>
+
+
+
+                <!--<EditText-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="王大锤"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:gravity="center_vertical|right"-->
+                    <!--android:textColor="#999999"-->
+                    <!--android:layout_weight="3"-->
+                    />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_item_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="有效期"
+                    android:textSize="17sp"
+                    android:layout_weight="1"
+                    />
+
+                <EditText
+                    android:id="@+id/real_name_auth_idcard_idcard_valid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="310123123123123"
+                    android:textSize="16sp"
+                    android:gravity="center_vertical|right"
+                    android:textColor="#999999"
+                    android:layout_weight="3"
+                    android:background="@color/white"
+                    />
+            </LinearLayout>
+
+            <View style="@style/divider_horizontal_item_line" />
+
+            <Button
+                android:id="@+id/btn_real_name_authentication_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_alignParentBottom="true"
+                style="@style/btn_next_style_red"
+                android:text="下一步"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

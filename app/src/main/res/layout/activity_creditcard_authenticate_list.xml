@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llDemoRoot"
+    style="@style/activity_page" >
+
+    <RelativeLayout style="@style/topbar_bg" >
+
+        <ImageButton style="@style/topbar_return_img1" />
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="信用卡认证" />
+
+        <TextView
+            android:id="@+id/to_quota_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:textColor="#666666"
+            android:text="额度说明" />
+
+    </RelativeLayout>
+
+
+    <!-- BaseHttpRecyclerXXX的子类布局layout中，SmartRefreshLayout和RecyclerView必须有，且它们的id必须按以下写法 -->
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/match_match"
+        android:layout_height="wrap_content"
+        android:id="@id/srlBaseHttpList"
+        app:srlEnableLoadmore="true"
+        app:srlEnablePreviewInEditMode="true"
+        >
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            style="@style/match_wrap"
+            />
+
+        <ListView
+            android:id="@id/lvBaseList"
+            style="@style/lv"
+            />
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            style="@style/match_wrap"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <Button
+        android:id="@+id/tv_bank_authenticate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_alignParentBottom="true"
+        style="@style/btn_next_style_red"
+        android:text="认证提额"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+</LinearLayout>

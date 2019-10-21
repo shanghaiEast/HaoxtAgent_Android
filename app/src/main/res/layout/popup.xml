@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_A6black"
+    android:padding="@dimen/dimen_8">
+
+
+    <Button
+        android:id="@+id/card_payment_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@drawable/card_pay_button_bg"
+        android:text="@string/card_payment"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_17" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:layout_above="@+id/card_payment_bt"
+        android:background="@drawable/pay_pop_bg"
+        android:paddingTop="@dimen/dimen_18">
+
+        <TextView
+            android:id="@+id/cancel_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dimen_21"
+            android:text="@string/cancel"
+            android:textColor="@color/button_normal"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/line_item"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_17" />
+
+
+        <View
+            android:id="@+id/pop_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_below="@+id/title_tv"
+            android:layout_marginTop="@dimen/dimen_11"
+            android:background="@color/color_line_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pop_line"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:paddingLeft="@dimen/dimen_21"
+            android:text="@string/product_name"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_17" />
+
+        <TextView
+            android:id="@+id/product_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pop_line"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_24"
+            android:layout_marginRight="@dimen/dimen_47"
+            android:text="收款"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_17" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:layout_below="@+id/product_name_tv"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:background="@color/color_line_bg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name_tv"
+            android:layout_marginTop="@dimen/dimen_27"
+            android:paddingLeft="@dimen/dimen_21"
+            android:text="@string/payment_amount"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_17" />
+
+        <TextView
+            android:id="@+id/payment_amount_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name_tv"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dimen_27"
+            android:layout_marginRight="@dimen/dimen_36"
+            android:text="263.82"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_17" />
+    </RelativeLayout>
+</RelativeLayout>

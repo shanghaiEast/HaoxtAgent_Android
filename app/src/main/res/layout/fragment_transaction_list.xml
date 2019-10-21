@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_48"
+        android:layout_marginTop="@dimen/dimen_20"
+        android:gravity="center"
+        android:text="@string/transaction_query"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_20" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_below="@+id/title_tv"
+        android:background="@color/color_F5" />
+
+    <LinearLayout
+        android:id="@+id/time_screen_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_27"
+        android:layout_below="@+id/line1"
+        android:layout_marginLeft="@dimen/dimen_18"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:background="@drawable/select_time_bg"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dimen_9">
+
+        <TextView
+            android:id="@+id/start_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/dimen_10"
+            android:text="2019/01/23"
+            android:textSize="@dimen/font_12" />
+
+        <TextView
+            android:id="@+id/end_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableRight="@mipmap/triangle_icon"
+            android:drawablePadding="@dimen/dimen_7"
+            android:text="2019/01/23"
+            android:textColor="@color/color_screen_text"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/condition_screen_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dimen_27"
+        android:layout_below="@+id/line1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/dimen_16"
+        android:layout_marginRight="@dimen/dimen_28"
+        android:background="@drawable/select_time_bg"
+        android:drawableRight="@mipmap/triangle_icon"
+        android:drawablePadding="@dimen/dimen_4"
+        android:gravity="center"
+        android:onClick="@{transactionViewModel::click}"
+        android:paddingHorizontal="@dimen/dimen_7"
+        android:text="@string/screen"
+        android:textColor="@color/color_screen_text"
+        android:textSize="@dimen/font_12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="@dimen/dimen_54"
+        android:background="@color/color_F5" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line1"
+        android:layout_marginTop="@dimen/dimen_58">
+
+        <TextView
+            android:id="@+id/no_data_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@mipmap/nodata_bg"
+            android:drawablePadding="@dimen/dimen_11"
+            android:gravity="center_horizontal"
+            android:text="@string/no_msg"
+            android:textColor="@color/no_data_color"
+            android:textSize="@dimen/font_12"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/sale_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</RelativeLayout>

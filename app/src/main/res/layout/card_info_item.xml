@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    android:background="@drawable/white_corner"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:background="@drawable/bank_msg_item_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中信实业银行"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="18dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/tvBankCardType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="贷记卡"
+            android:layout_marginTop="8dp"
+            android:textColor="#FFFFFF"
+            />
+
+        <TextView
+            android:id="@+id/tvBankNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6217 **** **** **** 4086"
+            android:layout_marginTop="19dp"
+            android:textColor="#FFFFFF"
+            />
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/ll_background"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_epos_my_bank_card_item"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="15dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:paddingRight="22dp">-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="3"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/iv_bank_logo"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="12dp"-->
+                    <!--android:layout_marginRight="12dp"-->
+                    <!--android:src="@drawable/ts_logo" />-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_bank_name"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="-&#45;&#45;"-->
+                        <!--android:textColor="@color/gray_3"-->
+                        <!--android:textSize="15sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/tv_bank_card_type"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="10dp"-->
+                        <!--android:text="-&#45;&#45;"-->
+                        <!--android:textColor="@color/gray_3"-->
+                        <!--android:textSize="12sp" />-->
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="3"-->
+                <!--android:gravity="end">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/tv_bank_verified_status"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center"-->
+                    <!--android:text="-&#45;&#45;"-->
+                    <!--android:textSize="14sp" />-->
+
+            <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:gravity="end"-->
+            <!--android:paddingRight="22dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_bank_no_prefix"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:baselineAligned="false"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="****  ****  ****  "-->
+                <!--android:textColor="@color/gray_3"-->
+                <!--android:textSize="18sp"-->
+                <!--android:visibility="gone" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_bank_no"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:text="&#45;&#45;&#45;&#45;"-->
+                <!--android:textColor="#464c55"-->
+                <!--android:textSize="18sp" />-->
+
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+
+</LinearLayout>

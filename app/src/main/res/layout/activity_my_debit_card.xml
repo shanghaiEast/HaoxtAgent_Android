@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llDemoRoot"
+    style="@style/activity_page" >
+
+    <RelativeLayout style="@style/topbar_bg">
+
+        <ImageButton
+            style="@style/topbar_return_img1"
+            android:onClick="onReturnClick" />
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="我的结算卡" />
+
+        <TextView
+            android:id="@+id/to_update_debit_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:textColor="#666666"
+            android:text="更换结算卡" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_background"
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:padding="15dp"
+        android:background="@drawable/bank_msg_item_background"
+        android:orientation="horizontal">
+        <!--android:background="@drawable/bank_msg_item_background"-->
+
+
+        <ImageView
+            android:id="@+id/bank_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/zhongxin_logo"/>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_8"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvBankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="中信实业银行"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="18dp"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/tvBankCardType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贷记卡"
+                android:layout_marginTop="8dp"
+                android:textColor="#FFFFFF"
+                />
+
+            <TextView
+                android:id="@+id/tvBankNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6217 **** **** **** 4086"
+                android:layout_marginTop="19dp"
+                android:textColor="#FFFFFF"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

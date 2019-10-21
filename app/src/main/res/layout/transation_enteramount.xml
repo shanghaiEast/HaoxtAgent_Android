@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/activity_page"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:id="@+id/titlebar_my_setting"
+        >
+
+        <ImageButton style="@style/topbar_return_img1"
+            android:onClick="onReturnClick"/>
+
+        <!--<TextView-->
+            <!--style="@style/topbar_title"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:text="收款" />-->
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/transation_type_tx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="普通收款(超级收款)"
+        android:textSize="@dimen/font_30"
+        android:textColor="@color/gray_3"
+        android:layout_marginTop="@dimen/dimen_27"
+        android:layout_marginLeft="16dp"
+         />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_61"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/symbol_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/font_30" />
+
+        <EditText
+            android:id="@+id/number_et"
+            android:layout_width="364dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/white_corner"
+            android:hint="@string/enter_amount"
+            android:inputType="number"
+            android:gravity="left"
+            android:maxLines="@integer/int_1"
+            android:textSize="@dimen/font_30"
+            android:textColor="@color/gray_3"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_10"
+        android:background="@color/color_F9F9F9" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_31"
+        android:layout_marginBottom="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_16">
+
+        <TextView
+            android:id="@+id/card_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/credit_card"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/font_17" />
+
+        <!--<EditText-->
+            <!--android:id="@+id/auth_code_et"-->
+            <!--android:layout_width="339dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:background="@drawable/white_corner"-->
+            <!--android:inputType="number"-->
+            <!--android:maxLines="@integer/int_1"-->
+            <!--android:paddingLeft="@dimen/dimen_75"-->
+            <!--android:textSize="@dimen/font_14"-->
+            <!--android:layout_alignParentRight="true" />-->
+
+        <TextView
+            android:id="@+id/bank_card_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:drawableRight="@mipmap/into"
+            android:text="中国实业银行(8888)"
+            android:textColor="@color/gray_3"
+            android:textSize="@dimen/font_14" />
+    </RelativeLayout>
+
+    <View style="@style/divider_horizontal_item_line" />
+
+    <RelativeLayout
+        android:id="@+id/ali_pay_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_73"
+        android:paddingLeft="@dimen/dimen_16"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/ali_pay" />
+
+        <CheckBox
+            android:id="@+id/ali_pay_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_26"
+            android:button="@drawable/pay_check_box" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/we_chat_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_73"
+        android:paddingLeft="@dimen/dimen_16"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_1"
+            android:background="@color/color_line" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/we_chat" />
+
+        <CheckBox
+            android:id="@+id/we_chat_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_26"
+            android:button="@drawable/pay_check_box" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/pay_bt"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_51"
+        android:layout_below="@+id/content_ly"
+        android:layout_marginHorizontal="@dimen/dimen_43"
+        android:layout_marginTop="@dimen/dimen_72"
+        android:background="@drawable/pay_button_bg"
+        android:text="@string/confirm_receipt"
+        android:textColor="@color/color_white"
+        android:textSize="@dimen/font_20" />
+</LinearLayout>

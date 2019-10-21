@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "com.haoxt.agent"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 30
+        versionName "20.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets{
+        main{
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []    //disable automatic ndk-build
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    api project(':QRCodeLibrary')
+    api project(':TFTLibrary')
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson-parent:2.8.5'
+    implementation project(':sdkproject')
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.7'
+}

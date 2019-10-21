@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/button_normal">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_72"
+        android:layout_marginBottom="@dimen/dimen_65"
+        android:paddingTop="@dimen/dimen_16">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="888dp"
+            android:layout_marginHorizontal="@dimen/dimen_16"
+            android:background="@mipmap/slip_bg">
+
+            <ImageView
+                android:layout_width="@dimen/dimen_22"
+                android:layout_height="@dimen/dimen_48"
+                android:layout_marginLeft="@dimen/dimen_35"
+                android:scaleType="center"
+                android:src="@mipmap/unionpay_icon" />
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_48"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:text="@string/sales_slip"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/font_20" />
+
+            <View
+                android:id="@+id/line_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_1"
+                android:layout_below="@+id/title_tv"
+                android:layout_marginHorizontal="@dimen/dimen_24"
+                android:background="@mipmap/imaginary_line" />
+
+            <LinearLayout
+                android:id="@+id/key_ly"
+                android:layout_width="@dimen/dimen_57"
+                android:layout_height="623dp"
+                android:layout_below="@+id/line_view"
+                android:layout_marginLeft="@dimen/dimen_35"
+                android:layout_marginTop="@dimen/dimen_10"
+                android:layout_marginBottom="@dimen/dimen_200"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/terminals_no"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/merchant_name"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/merchant_code"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/acquiring_bank"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/expiry_date"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/card_brand"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/issuing_bank"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/card_type"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/card_number"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/trade_type"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/trade_date"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="@string/trace_no"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_2"
+                    android:gravity="center_vertical"
+                    android:text="@string/money"
+                    android:textColor="@color/color_key_text"
+                    android:textSize="@dimen/font_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/value_ly"
+                android:layout_width="match_parent"
+                android:layout_height="623dp"
+                android:layout_alignTop="@id/key_ly"
+                android:layout_marginLeft="@dimen/dimen_30"
+                android:layout_marginBottom="@dimen/dimen_200"
+                android:layout_toRightOf="@+id/key_ly"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sales_slip_device_sn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="13754190"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/sales_slip_merchant_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="上海市宏达百货店"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/sales_slip_merchant_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="64835439973522ICJK"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/sales_slip_acquiring_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="开店宝"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/sales_slip_term_validity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="****"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/sales_slip_card_organization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="CUP"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/sales_slip_issuing_bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="中国邮政储蓄银行信用卡中心"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="2019-06-11 19:26:22"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/sales_slip_search_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_1"
+                    android:gravity="center_vertical"
+                    android:text="7355533"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/font_14" />
+
+                <TextView
+                    android:id="@+id/sales_slip_search_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_weight="@integer/int_2"
+                    android:gravity="center_vertical"
+                    android:text="RMB 193.00"
+                    android:textColor="@color/color_money_text"
+                    android:textSize="@dimen/font_20" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_200"
+                android:layout_alignParentBottom="true"
+                android:layout_marginHorizontal="@dimen/dimen_24"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dimen_20"
+                android:paddingBottom="@dimen/dimen_11">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:background="@mipmap/imaginary_line" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dimen_26"
+                    android:text="@string/cardholder_signs"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_14" />
+
+                <ImageView
+                    android:id="@+id/salaspurchase_purchase_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_0"
+                    android:layout_marginTop="@dimen/dimen_8"
+                    android:layout_weight="@integer/int_1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_1"
+                    android:background="@mipmap/imaginary_line" />
+
+                <Button
+                    android:id="@+id/confirm_bt"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_65"
+                    android:background="@null"
+                    android:text="@string/confirm"
+                    android:textColor="@color/button_normal"
+                    android:textSize="@dimen/font_20" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

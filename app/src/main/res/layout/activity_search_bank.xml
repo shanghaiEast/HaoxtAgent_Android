@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/activity_page"
+    android:background="@color/color_bg_layout"
+    android:orientation="vertical">
+
+    <LinearLayout style="@style/topbar_bg"
+        android:id="@+id/ctb_credit_card_certification"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+
+        <ImageButton style="@style/topbar_return_img1"
+            android:layout_weight="1"
+            />
+
+        <EditText
+            android:id="@+id/bank_searc_name"
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:hint="请输入关键字进行搜索"
+            android:background="@color/white"
+            android:layout_weight="3"
+            />
+
+        <Button
+            android:id="@+id/bank_search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索"
+            android:background="@color/topbar_bg"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
+
+            <ListView
+                android:id="@+id/bank_name_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="12dp"
+                android:divider="@color/contentColor"
+                android:dividerHeight="1px"
+                android:minHeight="100dp"
+                android:scrollbars="none" />
+
+            <!--<ListView-->
+                <!--android:id="@+id/bank_name_lv"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+
+        </LinearLayout>
+
+    <!--</ScrollView>-->
+
+</LinearLayout>
