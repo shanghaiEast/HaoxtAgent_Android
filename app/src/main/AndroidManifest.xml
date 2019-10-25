@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
@@ -26,18 +25,12 @@
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- ZBLibrary <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- CommonUtil等类的部分功能需要，不需要的功能对应的权限可不复制粘贴 <<<<<< -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.SEND_SMS" /> <!-- CommonUtil等类的部分功能需要，不需要的功能对应的权限可不复制粘贴 >>>>>> -->
     <!-- ZBLibrary >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> -->
     <!-- QRCodeLibrary <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< -->
@@ -45,16 +38,9 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
-
     <uses-permission
         android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -291,11 +277,6 @@
                 身份证(UI竖屏展示)
             -->
         </activity>
-        <activity
-            android:name="cn.cloudwalk.libproject.OcrResultActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            tools:ignore="DuplicateActivity" />
 
         <activity
             android:name="cn.cloudwalk.libproject.CloudwalkBankCardOCRActivity"
@@ -306,6 +287,12 @@
             android:name="cn.cloudwalk.libproject.BankCardResultActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
+        <activity android:name=".activity.serviceprovider.ServiceProviderActivity" />
+        <activity android:name=".activity.serviceprovider.InvitePartnersActivity" />
+        <activity android:name=".activity.serviceprovider.PartnerQueryActivity" />
+        <activity android:name=".activity.serviceprovider.PartnerDetailActivity" />
+        <activity android:name=".activity.home.merchantquery.MerchantQueryActivity" />
+        <activity android:name=".activity.home.merchantquery.MerchantDetailActivity" />
     </application>
 
 </manifest>

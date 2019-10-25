@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activity_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/topbar_bg"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imgbtn"
+            style="@style/topbar_return_img1" />
+
+        <EditText
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/sousuo"
+            android:id="@+id/bank_searc_name"
+            style="@style/topbar_title"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/imgbtn"
+            android:layout_toLeftOf="@+id/btn_merchant_search"
+            android:layout_toRightOf="@+id/imgbtn"
+            android:layout_toStartOf="@+id/btn_merchant_search"
+            android:background="@drawable/serchbox_bg"
+            android:cursorVisible="false"
+            android:hint="请输入关键字"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_merchant_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/topbar_bg"
+            android:text="搜索"
+            android:textSize="13sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F5F5F5" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_merchant_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none" />
+
+</LinearLayout>
