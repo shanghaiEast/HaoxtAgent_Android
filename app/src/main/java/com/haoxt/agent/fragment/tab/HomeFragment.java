@@ -13,7 +13,7 @@ import android.widget.TextView;
 import com.haoxt.agent.R;
 import com.haoxt.agent.activity.home.merchantquery.MerchantQueryActivity;
 import com.haoxt.agent.adapter.HomeGridAdepter;
-import com.haoxt.agent.activity.serviceprovider.ServiceProviderActivity;
+import com.haoxt.agent.activity.home.serviceprovider.ServiceProviderActivity;
 import com.haoxt.agent.application.AppApplication;
 import com.haoxt.agent.entity.HomeMenu;
 import com.haoxt.agent.util.HttpRequest;

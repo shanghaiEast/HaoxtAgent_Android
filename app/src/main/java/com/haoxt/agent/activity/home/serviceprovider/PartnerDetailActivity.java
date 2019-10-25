@@ -1,4 +1,4 @@
-package com.haoxt.agent.activity.serviceprovider;
+package com.haoxt.agent.activity.home.serviceprovider;
 
 import android.os.Bundle;
 import android.widget.TextView;

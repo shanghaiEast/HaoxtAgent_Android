@@ -1,4 +1,4 @@
-package com.haoxt.agent.activity.serviceprovider;
+package com.haoxt.agent.activity.home.serviceprovider;
 
 import android.content.Intent;
 import android.os.Bundle;

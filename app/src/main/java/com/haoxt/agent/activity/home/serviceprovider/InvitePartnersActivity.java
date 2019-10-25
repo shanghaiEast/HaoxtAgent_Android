@@ -1,4 +1,4 @@
-package com.haoxt.agent.activity.serviceprovider;
+package com.haoxt.agent.activity.home.serviceprovider;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -11,7 +11,6 @@ import com.haoxt.agent.R;
 import com.zxing.encoding.EncodingHandler;
 
 import tft.mpos.library.base.BaseActivity;
-import tft.mpos.library.util.JSON;
 
 /**
  * Created by liuxx on 2019/10/22
