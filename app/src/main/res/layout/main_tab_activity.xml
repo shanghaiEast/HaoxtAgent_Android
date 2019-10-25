@@ -41,6 +41,7 @@
                 android:src="@drawable/earth_selector" />
 
             <TextView
+                android:paddingTop="5dp"
                 android:id="@+id/tvBottomTabTab0"
                 style="@style/bottom_tab_tv"
                 android:text="好享推" />
@@ -58,6 +59,7 @@
                 android:src="@drawable/setting_selector" />
 
             <TextView
+                android:paddingTop="5dp"
                 android:id="@+id/tvBottomTabTab1"
                 style="@style/bottom_tab_tv"
                 android:text="我的" />
