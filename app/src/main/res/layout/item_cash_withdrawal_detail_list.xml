@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_rl"
+    android:layout_width="match_parent"
+    android:layout_height="98dp"
+    android:paddingHorizontal="@dimen/dimen_18">
+
+
+    <TextView
+        android:id="@+id/tx_transation_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:text="交易分润"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/font_17" />
+
+    <TextView
+        android:id="@+id/tx_transation_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tx_transation_type"
+        android:text="待审核"
+        android:textColor="@color/normal_orange"
+        android:textSize="@dimen/font_17" />
+
+    <TextView
+        android:id="@+id/tx_transation_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/tx_transation_type"
+        android:text="123"
+        android:textColor="@color/color_money_text"
+        android:textSize="@dimen/font_17"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="17dp" />
+
+    <TextView
+        android:id="@+id/tx_transation_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="2019/12/13"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/dimen_17"
+        android:layout_alignLeft="@+id/tx_transation_type"
+        android:layout_marginBottom="@dimen/dimen_20"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/color_line_bg" />
+</RelativeLayout>

@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/topbar_tab_bg" >
+    style="@style/topbar_tab_bg"
+    android:layout_width="match_parent"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/tvTopTabViewTabFirst"
         style="@style/topbar_tab_tv_left"
+        android:layout_weight="1"
         android:text="FIRST" />
 
-    <View style="@style/divider_vertical_1dp_white" />
+    <!--<View style="@style/divider_vertical_1dp_white" />-->
 
     <LinearLayout
         android:id="@+id/llTopTabViewContainer"
@@ -17,6 +20,7 @@
     <TextView
         android:id="@+id/tvTopTabViewTabLast"
         style="@style/topbar_tab_tv_right"
+        android:layout_weight="1"
         android:text="LAST" />
 
 </LinearLayout>

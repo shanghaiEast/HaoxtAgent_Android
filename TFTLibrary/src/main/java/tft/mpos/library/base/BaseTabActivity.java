@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -119,7 +120,9 @@ public abstract class BaseTabActivity extends BaseActivity implements ViewPresen
 
 
 	@Nullable
-	private TextView tvBaseTabTitle;
+	public TextView tvBaseTabTitle;
+
+	public RelativeLayout rlbaseTabHeader;
 
 	@Nullable
 	private View ivBaseTabReturn;
@@ -140,6 +143,7 @@ public abstract class BaseTabActivity extends BaseActivity implements ViewPresen
 	public void initView() {//必须调用
 
 		tvBaseTabTitle = findView(R.id.tvBaseTabTitle);
+		rlbaseTabHeader = findView(R.id.rlbaseTabHeader);
 
 		ivBaseTabReturn = findView(R.id.ivBaseTabReturn);
 		tvBaseTabReturn = findView(R.id.tvBaseTabReturn);

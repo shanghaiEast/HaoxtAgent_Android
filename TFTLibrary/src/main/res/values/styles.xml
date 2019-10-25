@@ -307,11 +307,24 @@
         <item name="android:layout_height">fill_parent</item>
     </style>
 
+    <style name="divider_vertical_05dp" parent="divider">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">fill_parent</item>
+    </style>
+
     <style name="divider_vertical_1dp_gray" parent="divider_vertical_1dp">
         <item name="android:background">@color/gray_2</item>
     </style>
 
-    <style name="divider_vertical_1dp_white" parent="divider_vertical_1dp">
+    <style name="divider_vertical_05dp_gray" parent="divider_vertical_05dp">
+        <item name="android:background">@color/gray_2</item>
+    </style>
+
+    <style name="divider_vertical_1dp_white" parent="divider_vertical_05dp">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="divider_vertical_05dp_white" parent="divider_vertical_1dp">
         <item name="android:background">@color/white</item>
     </style>
 

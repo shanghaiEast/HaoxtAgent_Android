@@ -1,5 +1,7 @@
 package com.haoxt.agent.activity.home.transaction;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -22,6 +24,7 @@ import com.haoxt.agent.widget.MyDialog;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
+import tft.mpos.library.base.BaseActivity;
 import tft.mpos.library.base.BaseFragment;
 import tft.mpos.library.interfaces.OnHttpResponseListener;
 
@@ -32,7 +35,7 @@ import tft.mpos.library.interfaces.OnHttpResponseListener;
  * Version:     V1.0.0<br>
  * Update:     <br>
  */
-public class TransactionFragment extends BaseFragment implements View.OnClickListener, TransactionListAdapter.OnItemClickListener, SelectTimePopup.OnConfirmTimeListener {
+public class TransactionActivity extends BaseActivity implements View.OnClickListener, TransactionListAdapter.OnItemClickListener, SelectTimePopup.OnConfirmTimeListener {
 
     private LinearLayout mTimeScreenLy;
     private TextView mConditionScreenTv;
@@ -42,28 +45,29 @@ public class TransactionFragment extends BaseFragment implements View.OnClickLis
     private MyDialog mConditionPopup;
     private SelectTimePopup mTimePopup;
 
-    //单例
-    public static TransactionFragment newInstance() {
-        return TransactionFragment.TransactionListFragmentFactory.transactionListFragment;
+
+    /**启动这个Activity的Intent
+     * @param context
+     * @return
+     */
+    public static Intent createIntent(Context context) {
+        return new Intent(context, TransactionActivity.class);
     }
 
-    private static final class TransactionListFragmentFactory {
-        public static final TransactionFragment transactionListFragment = new TransactionFragment();
-    }
+    //启动方法>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-    @Nullable
+
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        super.onCreateView(inflater, container, savedInstanceState);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_transaction_list);
-        //类相关初始化，必须使用>>>>>>>>>>>>>>>>
 
         //功能归类分区方法，必须调用<<<<<<<<<<
         initView();
         initData();
         initEvent();
         //功能归类分区方法，必须调用>>>>>>>>>>
-        return view;
+
     }
 
     @Override

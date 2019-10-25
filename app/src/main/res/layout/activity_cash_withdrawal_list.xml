@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:commonTitleBar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/panel_bg"
+    style="@style/activity_page"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:id="@+id/titlebar_my_setting"
+        android:background="@color/white"
+        >
+
+        <ImageButton style="@style/topbar_return_img1"
+            android:onClick="onReturnClick"/>
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="提现明细" />
+
+        <TextView
+            android:id="@+id/tx_cash_withdrawal_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:textColor="#666666"
+            android:textSize="@dimen/dimen_15"
+            android:text="筛选" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line1">
+
+        <TextView
+            android:id="@+id/no_data_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@mipmap/nodata_bg"
+            android:drawablePadding="@dimen/dimen_11"
+            android:gravity="center_horizontal"
+            android:text="@string/no_msg"
+            android:textColor="@color/no_data_color"
+            android:textSize="@dimen/font_12"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/data_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+
+</LinearLayout>

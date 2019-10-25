@@ -124,11 +124,11 @@ public class MySettingActivity extends BaseActivity implements OnClickListener {
 
 		switch (view.getId()) {
 			case R.id.tv_password_management:
-//				toActivity(ReviseLoginPwdActivity.createIntent(context));
+				toActivity(ReviseLoginPwdActivity.createIntent(context));
 				break;
 
 			case R.id.tv_update_phone:
-//				toActivity(UpdatePhoneActivity.createIntent(context));
+				toActivity(UpdatePhoneActivity.createIntent(context));
 				break;
 
 			default:

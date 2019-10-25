@@ -102,4 +102,10 @@
         <!-- 指定消失的动画xml  -->
     </style>
 
+    <!-- tab标题-->
+    <style name="tab_head" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
 </resources>

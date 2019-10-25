@@ -5,6 +5,7 @@
     <item name="pbBaseTitle" type="id"/>
     <item name="tvBaseTabTitle" type="id"/>
     <item name="ivBaseTabReturn" type="id"/>
+    <item name="rlbaseTabHeader" type="id"/>
     <item name="tvBaseTabReturn" type="id"/>
     <item name="llBaseTabTopRightButtonContainer" type="id"/>
     <item name="llBaseTabTabContainer" type="id"/>

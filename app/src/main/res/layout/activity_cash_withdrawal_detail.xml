@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    style="@style/activity_page"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:background="@color/white"
+        android:id="@+id/titlebar_mypos_info">
+
+        <ImageButton style="@style/topbar_return_img1"
+            android:onClick="onReturnClick"/>
+
+        <TextView
+            style="@style/topbar_title"
+            android:textColor="@color/alpha_9"
+            android:layout_centerHorizontal="true"
+            android:text="提现明细详情" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_11"
+        android:background="@color/color_F5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dimen_16">
+
+        <TextView
+            android:layout_marginTop="@dimen/dimen_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="交易分润"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/font_17" />
+
+        <TextView
+            android:id="@+id/tx_cash_withdrawal_detail_transation_profit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-15.25"
+            android:textColor="@color/text_color"
+            android:layout_marginTop="@dimen/dimen_10"
+            android:layout_marginBottom="@dimen/dimen_30"
+            android:textSize="@dimen/font_32" />
+
+
+
+        <TextView
+            android:id="@+id/tv_order_detail_income"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:textColor="@color/button_normal"
+            android:textSize="@dimen/font_17" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_1"
+        android:background="@color/color_F5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llCreditCardAuth"
+            style="@style/content_item_white">
+
+            <TextView
+                style="@style/content_item_lf_tv"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:text="订单状态"
+                android:textSize="@dimen/dimen_16" />
+
+            <TextView
+                android:id="@+id/tx_cash_withdrawal_detail_status"
+                style="@style/content_item_lf_tv"
+                android:textColor="@color/gray_3"
+                android:text="审核通过"
+                android:textSize="@dimen/dimen_16" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/llPOSApply"
+            style="@style/content_item_white">
+
+            <TextView
+                style="@style/content_item_lf_tv"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:text="提现日期" />
+
+            <TextView
+                android:id="@+id/tx_cash_withdrawal_detail_date"
+                style="@style/content_item_lf_tv"
+                android:textColor="@color/gray_3"
+                android:text="张三" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llCustomerServiceOnline"
+            style="@style/content_item_white">
+
+            <TextView
+                style="@style/content_item_lf_tv"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:text="提现编号" />
+
+            <TextView
+                android:id="@+id/tx_cash_withdrawal_detail_number"
+                style="@style/content_item_lf_tv"
+                android:textColor="@color/gray_3"
+                android:text="18017883972" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/content_item_white">
+
+            <TextView
+                style="@style/content_item_lf_tv"
+                android:layout_marginLeft="3dp"
+                android:layout_width="100dp"
+                android:text="提现手续费" />
+
+            <TextView
+                android:id="@+id/tx_cash_withdrawal_detail_fee"
+                style="@style/content_item_lf_tv"
+                android:textColor="@color/gray_3"
+                android:text="2018-07-30" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/content_item_white">
+
+            <TextView
+                style="@style/content_item_lf_tv"
+                android:layout_width="100dp"
+                android:layout_marginLeft="3dp"
+                android:text="审核时间" />
+
+            <TextView
+                android:id="@+id/tx_cash_withdrawal_detail_examineTime"
+                style="@style/content_item_lf_tv"
+                android:textColor="@color/gray_3"
+                android:text="2018-07-30" />
+
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/content_item_white">
+
+            <TextView
+                style="@style/content_item_lf_tv"
+                android:layout_width="100dp"
+                android:layout_marginLeft="3dp"
+                android:text="审核备注" />
+
+            <TextView
+                android:id="@+id/tx_cash_withdrawal_detail_examineDes"
+                style="@style/content_item_lf_tv"
+                android:textColor="@color/gray_3"
+                android:text="2018-07-30" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
