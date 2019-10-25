@@ -22,6 +22,7 @@ import tft.mpos.library.util.StringUtil;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.support.annotation.LayoutRes;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -92,6 +93,7 @@ public class TopTabView extends BaseView<String[]> {
 		tvTopTabViewTabLast = findView(R.id.tvTopTabViewTabLast);
 
 		llTopTabViewContainer = findView(R.id.llTopTabViewContainer);
+		llTopTabViewContainer.setBackgroundColor(Color.parseColor("#F5F5F5"));
 
 		return super.createView();
 	}
@@ -148,16 +150,20 @@ public class TopTabView extends BaseView<String[]> {
 				tvTabs[position] = (TextView) inflater.inflate(R.layout.top_tab_tv_center, llTopTabViewContainer, false);
 				llTopTabViewContainer.addView(tvTabs[position]);
 
-				View divider = inflater.inflate(R.layout.divider_vertical_1dp, llTopTabViewContainer, false);
-				divider.setBackgroundColor(getColor(R.color.white));
-				llTopTabViewContainer.addView(divider);
+
+//				View divider = inflater.inflate(R.layout.divider_vertical_1dp, llTopTabViewContainer, false);
+//				divider.setBackgroundColor(getColor(R.color.white));
+//				llTopTabViewContainer.addView(divider);
 			}
 			tvTabs[position].setText(StringUtil.getTrimedString(names[position]));
 			tvTabs[position].setOnClickListener(new OnClickListener() {
 
 				@Override
 				public void onClick(View v) {
+					TextView tv = tvTabs[position];
+//					tv.setTextSize(30);
 					select(position);
+
 				}
 			});
 

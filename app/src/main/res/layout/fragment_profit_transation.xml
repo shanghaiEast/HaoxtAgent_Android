@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.my.profit_detailed.TransationProfitFragment">
+
+    <LinearLayout
+        android:id="@+id/ll_profit_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/pink"
+        android:paddingBottom="@dimen/dimen_35"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tx_profit_sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_36"
+            android:textColor="@color/white"
+            android:text="688,090.25"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收益余额(元)"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/dimen_8"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_transation_profit_to_cash"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_shape_mini"
+            android:text="立即提现"
+            android:layout_marginBottom="@dimen/dimen_20"
+            android:layout_marginTop="@dimen/dimen_15"
+            android:textColor="@color/red"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_profit_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-35dp"
+        android:background="@drawable/bg_shadow_white"
+        android:layout_below="@+id/ll_profit_header"
+
+        android:layout_marginLeft="@dimen/dimen_17"
+        android:layout_marginRight="@dimen/dimen_17"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/dimen_15"
+        android:paddingBottom="@dimen/dimen_10"
+        android:paddingRight="22dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx_activation_fanxian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3259.00"
+                android:textColor="@color/gray_4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="激活返现(元)"
+                android:textColor="@color/gray_2"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <View style="@style/divider_vertical_1dp_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx_cash_fanxian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3259.00"
+                android:textColor="@color/gray_4"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:text="快提返现(元)"
+                android:textColor="@color/gray_2"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tx_profit_list_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ll_profit_card"
+        android:layout_centerVertical="true"
+        android:text="提现明细"
+        android:textColor="@color/gray_4"
+        android:textSize="16sp"
+        android:layout_alignLeft="@+id/ll_profit_card" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_15"
+        android:background="@color/white"
+        android:layout_below="@+id/tx_profit_list_header">
+
+        <TextView
+            android:id="@+id/no_data_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@mipmap/nodata_bg"
+            android:drawablePadding="@dimen/dimen_11"
+            android:gravity="center_horizontal"
+            android:text="@string/no_msg"
+            android:textColor="@color/no_data_color"
+            android:textSize="@dimen/font_12"
+            android:visibility="invisible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_profit_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+
+
+</RelativeLayout>

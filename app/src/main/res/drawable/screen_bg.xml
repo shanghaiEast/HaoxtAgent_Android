@@ -2,13 +2,15 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_checked="true">
         <shape android:shape="rectangle">
+            <corners android:radius="@dimen/dimen_3"></corners>
             <solid android:color="@color/button_normal"></solid>
         </shape>
 
     </item>
     <item android:state_checked="false">
         <shape android:shape="rectangle">
-            <solid android:color="@color/color_white"></solid>
+            <corners android:radius="@dimen/dimen_3"></corners>
+            <solid android:color="@color/gray_interest"></solid>
         </shape>
 
     </item>

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    style="@style/activity_page"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_bg"
+        android:background="@color/white"
+        android:id="@+id/titlebar_mypos_info">
+
+        <ImageButton style="@style/topbar_return_img1"
+            android:onClick="onReturnClick"/>
+
+        <TextView
+            style="@style/topbar_title"
+            android:textColor="@color/alpha_9"
+            android:layout_centerHorizontal="true"
+            android:text="筛选" />
+
+        <TextView
+            android:id="@+id/tx_condition_filter_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:textColor="#666666"
+            android:textSize="@dimen/dimen_15"
+            android:text="完成" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_0"
+        android:layout_weight="@integer/int_6"
+        android:background="@color/color_white"
+        android:orientation="vertical">
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_10"
+            android:background="@color/gray_interest" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimen_15"
+            android:paddingHorizontal="@dimen/dimen_21">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_21"
+                android:layout_weight="@integer/int_1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/amount_interval_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/date_interval"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_16"
+                    android:layout_alignParentLeft="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/startime_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/line_et_normal"
+                        android:hint="开始时间"
+                        android:gravity="center_horizontal"
+                        android:layout_weight="@integer/int_5"
+                        android:textColorHint="@color/red"
+                        android:textSize="@dimen/font_16" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="至"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/font_16"
+                        android:layout_alignParentLeft="true" />
+
+                    <TextView
+                        android:id="@+id/endtime_et"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_horizontal"
+                        android:background="@drawable/line_et_normal"
+                        android:layout_weight="@integer/int_5"
+                        android:hint="结束时间"
+                        android:textColorHint="@color/red"
+                        android:textSize="@dimen/font_16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_marginTop="@dimen/dimen_21"
+                android:orientation="vertical"
+                android:layout_weight="@integer/int_1">
+
+                <TextView
+                    android:id="@+id/trading_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收益类型"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/all1_cb"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_29"
+                        android:background="@drawable/screen_bg"
+                        android:button="@null"
+                        android:layout_weight="@integer/int_1"
+                        android:gravity="center"
+                        android:text="@string/check_all"
+                        android:textColor="@drawable/screen_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <CheckBox
+                        android:id="@+id/transation_cb"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_29"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:background="@drawable/screen_bg"
+                        android:layout_weight="@integer/int_1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="交易分润"
+                        android:textColor="@drawable/screen_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <CheckBox
+                        android:id="@+id/jihuo_cb"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_29"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:background="@drawable/screen_bg"
+                        android:layout_weight="@integer/int_1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="激活返现"
+                        android:textColor="@drawable/screen_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <CheckBox
+                        android:id="@+id/kuaiti_cb"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_29"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:background="@drawable/screen_bg"
+                        android:layout_weight="@integer/int_1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="快提返现"
+                        android:textColor="@drawable/screen_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_0"
+                android:layout_marginTop="@dimen/dimen_21"
+                android:orientation="vertical"
+                android:layout_weight="@integer/int_1">
+
+                <TextView
+                    android:id="@+id/trade_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="审核状态"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/font_15" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/all2_cb"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_29"
+                        android:background="@drawable/screen_bg"
+                        android:layout_weight="@integer/int_1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="@string/check_all"
+                        android:textColor="@drawable/screen_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <CheckBox
+                        android:id="@+id/wait_cb"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_29"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:background="@drawable/screen_bg"
+                        android:layout_weight="@integer/int_1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="待审核"
+                        android:textColor="@drawable/screen_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <CheckBox
+                        android:id="@+id/pass_cb"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_29"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:background="@drawable/screen_bg"
+                        android:layout_weight="@integer/int_1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="审核通过"
+                        android:textColor="@drawable/screen_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                    <CheckBox
+                        android:id="@+id/reject_cb"
+                        android:layout_width="@dimen/dimen_60"
+                        android:layout_height="@dimen/dimen_29"
+                        android:layout_marginLeft="@dimen/dimen_30"
+                        android:background="@drawable/screen_bg"
+                        android:layout_weight="@integer/int_1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="驳回"
+                        android:textColor="@drawable/screen_text_color"
+                        android:textSize="@dimen/font_14" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

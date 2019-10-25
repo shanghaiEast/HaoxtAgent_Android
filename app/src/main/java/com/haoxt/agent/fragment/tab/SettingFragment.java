@@ -16,7 +16,6 @@ package com.haoxt.agent.fragment.tab;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -28,8 +27,9 @@ import android.widget.TextView;
 import com.haoxt.agent.R;
 
 import com.haoxt.agent.activity.my.MyDebitCardActivity;
+import com.haoxt.agent.activity.my.MySettingActivity;
 import com.haoxt.agent.activity.my.RealNameAuthenticationActivity;
-import com.haoxt.agent.application.AppApplication;
+import com.haoxt.agent.activity.my.profit_detailed.ProfitDetailedAvtivity;
 import com.haoxt.agent.util.HttpRequest;
 
 import java.util.HashMap;
@@ -37,7 +37,6 @@ import java.util.Map;
 
 import tft.mpos.library.base.BaseFragment;
 import tft.mpos.library.interfaces.OnHttpResponseListener;
-import tft.mpos.library.ui.AlertDialog;
 import tft.mpos.library.ui.AlertDialog.OnDialogButtonClickListener;
 import tft.mpos.library.util.StringUtil;
 
@@ -83,29 +82,27 @@ public class SettingFragment extends BaseFragment implements OnClickListener, On
 
 	//UI显示区(操作UI，但不存在数据获取或处理代码，也不存在事件监听代码)<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
-	private ImageView ivSettingHead;
-	private TextView txuserName,txPhone,txmerchantNo,txMerchantNo,txRealnameAuth,txCreditCard,txQuota,txMyPos;
-	private LinearLayout llCreditCardAuth,llPOSApply,llCustomerServiceOnline,llMyHelp;
+	private ImageView profitDetailed;
+	private TextView txuserName,txPhone,transation,activation,cashOut;
+	private LinearLayout llRealName,llBankcard,llSettlementDetail,ll_Setting;
 
 	@Override
 	public void initView() {//必须调用
 
 
-		ivSettingHead = findView(R.id.ivSettingHead);
+//		profitDetailed= findView(R.id.ig_setting_profit_detailed);
 
 		txuserName = findView(R.id.tx_myheader_username);
 		txPhone = findView(R.id.tx_myheader_phone);
-		txmerchantNo = findView(R.id.tv_my_merchant_no);
 
-		txRealnameAuth = findView(R.id.tv_my_realname_auth);
-		txCreditCard = findView(R.id.tv_my_credit_card);
-		txQuota = findView(R.id.tv_my_quota);
-		txMyPos = findView(R.id.tv_my_pos);
+		transation = findView(R.id.tx_transation_profit);
+		activation = findView(R.id.tx_activation_fanxian);
+		cashOut = findView(R.id.tx_cash_fanxian);
 
-		llCreditCardAuth = findView(R.id.llCreditCardAuth);
-		llPOSApply = findView(R.id.llPOSApply);
-		llCustomerServiceOnline = findView(R.id.llCustomerServiceOnline);
-		llMyHelp = findView(R.id.llMyHelp);
+		llRealName = findView(R.id.ll_realname);
+		llBankcard = findView(R.id.ll_mybankcard);
+		llSettlementDetail = findView(R.id.ll_settlement_detail);
+		ll_Setting = findView(R.id.ll_setting);
 	}
 
 
@@ -155,7 +152,7 @@ public class SettingFragment extends BaseFragment implements OnClickListener, On
 
 					if(dataMap!=null&&"000000".equals(dataMap.get("rspCd").toString())){
 						//login
-						txmerchantNo.setText(userData.get("MERC_ID").toString());
+//						txmerchantNo.setText(userData.get("MERC_ID").toString());
 
 					}else{
 						showShortToast("获取商户信息失败");
@@ -180,19 +177,11 @@ public class SettingFragment extends BaseFragment implements OnClickListener, On
 	@Override
 	public void initEvent() {//必须调用
 
-		ivSettingHead.setOnClickListener(this);
-		findView(R.id.ll_merchant_info).setOnClickListener(this);
-
-		findView(R.id.tv_my_realname_auth).setOnClickListener(this);
-		findView(R.id.tv_my_credit_card).setOnClickListener(this);
-		findView(R.id.tv_my_quota).setOnClickListener(this);
-		findView(R.id.tv_my_pos).setOnClickListener(this);
-
-		findView(R.id.llCreditCardAuth).setOnClickListener(this);
-		findView(R.id.llPOSApply).setOnClickListener(this);
-		findView(R.id.llCustomerServiceOnline).setOnClickListener(this);
-		findView(R.id.llMyHelp).setOnClickListener(this);
-
+		findView(R.id.ig_setting_profit_detailed).setOnClickListener(this);
+		findView(R.id.ll_realname).setOnClickListener(this);
+		findView(R.id.ll_mybankcard).setOnClickListener(this);
+		findView(R.id.ll_settlement_detail).setOnClickListener(this);
+		findView(R.id.ll_setting).setOnClickListener(this);
 	}
 
 
@@ -213,65 +202,28 @@ public class SettingFragment extends BaseFragment implements OnClickListener, On
 		}
 	}
 
-
-
 	@Override
 	public void onClick(View v) {//直接调用不会显示v被点击效果
 		switch (v.getId()) {
-			case R.id.ivSettingHead:
-//				toActivity(MySettingActivity.createIntent(context));
-				break;
-
-			case R.id.ll_merchant_info:
-//				toActivity(MyUserInfoActivity.createIntent(context));
-				break;
-
-			case R.id.llCreditCardAuth:
-//				toActivity(CreditcardAuthenticateActivity.createIntent(context,0));
-				break;
-			case R.id.llPOSApply:
-//				toActivity(MyPOSApplyActivity.createIntent(context));
-				break;
-			case R.id.llCustomerServiceOnline:
-//				toActivity(DeviceBindActivity.createIntent(context));
-				break;
-
-			case R.id.llMyHelp:
+			case R.id.ig_setting_profit_detailed:
+				toActivity(ProfitDetailedAvtivity.createIntent(context));
 
 				break;
 
-			case R.id.tv_my_realname_auth:
+			case R.id.ll_realname:
 				toActivity(RealNameAuthenticationActivity.createIntent(context));
 				break;
 
-			case R.id.tv_my_credit_card:
+			case R.id.ll_mybankcard:
 				toActivity(MyDebitCardActivity.createIntent(context,0));
 				break;
 
-			case R.id.tv_my_quota:
+			case R.id.ll_settlement_detail:
 //				toActivity(MyImmediateQuotaActivity.createIntent(context));
 				break;
 
-			case R.id.tv_my_pos:
-				if(AppApplication.getInstance().getUserTermStatus().equals("0")){
-					new AlertDialog(context, "提示", "当前账号未绑定机具，请绑定机具", true, 0, new AlertDialog.OnDialogButtonClickListener(){
-						@Override
-						public void onDialogButtonClick(int requestCode, boolean isPositive) {
-
-							if (isPositive == true){
-//								toActivity(DeviceBindActivity.createIntent(context));
-							}else{
-								Log.d("状态--------->", "--"+isPositive+"===="+requestCode);
-							}
-
-						}
-					}).show();
-					return;
-
-				}else{
-//					toActivity(MyPOSInfoActivity.createIntent(context));
-				}
-
+			case R.id.ll_setting:
+				toActivity(MySettingActivity.createIntent(context));
 				break;
 
 			default:
