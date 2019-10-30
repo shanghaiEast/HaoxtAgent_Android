@@ -81,18 +81,18 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name=".activity.login.LoginActivity">
+        <activity android:name=".fragment.tab.MainTabActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".fragment.tab.MainTabActivity"
-            android:label="@string/app_name"
-            android:launchMode="singleInstance"
-            android:screenOrientation="portrait" />
+        <!--<activity-->
+            <!--android:name=".fragment.tab.MainTabActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:launchMode="singleInstance"-->
+            <!--android:screenOrientation="portrait" />-->
         <!--android:theme="@style/SplashTheme"-->
         <activity
             android:name=".activity.other.SplashActivity"
@@ -326,6 +326,11 @@
         <activity android:name=".activity.home.serviceprovider.PartnerDetailActivity" />
         <activity android:name=".activity.home.merchantquery.MerchantQueryActivity" />
         <activity android:name=".activity.home.merchantquery.MerchantDetailActivity" />
+        <activity android:name=".activity.home.terminalmanagement.TerminalHomeActivity" />
+        <activity android:name=".activity.home.terminalmanagement.TerminalUnboundActivity" />
+        <activity android:name=".activity.home.terminalmanagement.TerminalQueryActivity" />
+        <activity android:name=".activity.home.terminalmanagement.TerminalDetailActivity" />
+        <activity android:name=".activity.home.terminalmanagement.TerminalAllocationActivity" />
     </application>
 
 </manifest>

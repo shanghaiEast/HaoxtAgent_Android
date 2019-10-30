@@ -94,6 +94,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 style="@style/ll_vertical_wrap_wrap"
                 android:layout_margin="12dp"
                 android:paddingBottom="4dp"

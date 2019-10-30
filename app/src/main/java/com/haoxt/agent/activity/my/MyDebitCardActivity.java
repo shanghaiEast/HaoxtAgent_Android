@@ -101,9 +101,9 @@ public class MyDebitCardActivity extends BaseActivity implements View.OnClickLis
 	public void initView() {
 		logo = findViewById(R.id.bank_logo);
 
-		tvBankName = (TextView)findViewById(R.id.tvBankName);
-		tvBankCardType = (TextView)findViewById(R.id.tvBankCardType);
-		tvBankNo = (TextView)findViewById(R.id.tvBankNo);
+		tvBankName = findViewById(R.id.tvBankName);
+		tvBankCardType = findViewById(R.id.tvBankCardType);
+		tvBankNo = findViewById(R.id.tvBankNo);
 		toUpdateDebitCard = findViewById(R.id.to_update_debit_card);
 
 	}
@@ -122,7 +122,7 @@ public class MyDebitCardActivity extends BaseActivity implements View.OnClickLis
 				Map<String, Object> dataMap =  StringUtil.json2map(resultJson);
 				Map<String, Object>  userData = (Map<String, Object>) dataMap.get("rspMap");
 
-				if("000000".equals(dataMap.get("rspCd").toString())){
+				if("000000".equals(StringUtil.get(dataMap.get("rspCd")))){
 
 					tvBankName.setText(userData.get("STL_BNK_NM")==null?"":userData.get("STL_BNK_NM").toString());
 					tvBankNo.setText(userData.get("STL_ACO_NO")==null?"":userData.get("STL_ACO_NO").toString());
