@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp"
+    android:paddingRight="10dp">
+
+    <TextView
+        android:id="@+id/tv_terminal_sn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SN:  8473847384793-238473"
+        android:textColor="#ff333333"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_terminal_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="绑定状态:  已绑定"
+        android:textColor="#ff666666"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="#CCCCCC" />
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activity_page"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/topbar_bg">
+
+        <ImageButton
+            style="@style/topbar_return_img1"
+            android:onClick="onReturnClick" />
+
+        <TextView
+            style="@style/topbar_title"
+            android:layout_centerHorizontal="true"
+            android:text="终端查询"
+            android:textColor="#ff333333"
+            android:textSize="17sp" />
+        <TextView
+            android:textColor="#ff333333"
+            android:id="@+id/tv_ter_query_screen"
+            style="@style/topbar_right_btn"
+            android:text="筛选" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#F5F5F5" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rlv_terminal_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:scrollbars="none" />
+
+</LinearLayout>
