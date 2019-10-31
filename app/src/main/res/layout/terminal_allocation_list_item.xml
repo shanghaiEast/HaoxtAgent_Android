@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_batch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="划拨批次1"
+            android:textColor="#ff333333"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="删除"
+            android:textColor="#fffe4049"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="20dp"
+        android:background="#CCCCCC" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="划拨台数"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_reduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:adjustViewBounds="true"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="10dp"
+            android:src="@drawable/terminal_allocation_reduce" />
+
+        <EditText
+            android:id="@+id/et_input_ter_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#F7F7F7"
+            android:gravity="center"
+            android:maxLength="6"
+            android:minWidth="40dp"
+            android:text="1" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:src="@drawable/terminal_allocation_plus" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="起始序列"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_start_terminalno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toStartOf="@+id/iv_ter_start_scan"
+            android:layout_toLeftOf="@+id/iv_ter_start_scan"
+            android:layout_toEndOf="@id/textview1"
+            android:layout_toRightOf="@id/textview1"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入或扫描起始机具序列号"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_ter_start_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:src="@drawable/terminal_unbound_scan" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="截止序列"
+            android:textColor="#ff333333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_end_terminalno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toStartOf="@+id/iv_ter_end_scan"
+            android:layout_toLeftOf="@+id/iv_ter_end_scan"
+            android:layout_toEndOf="@id/textview2"
+            android:layout_toRightOf="@id/textview2"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="请输入或扫描截止机具序列号"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/iv_ter_end_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:src="@drawable/terminal_unbound_scan" />
+    </RelativeLayout>
+
+</LinearLayout>

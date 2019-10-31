@@ -13,8 +13,9 @@ import android.widget.TextView;
 import com.haoxt.agent.R;
 import com.haoxt.agent.activity.home.achievement_manage.AchievementManageActivity;
 import com.haoxt.agent.activity.home.merchantquery.MerchantQueryActivity;
-import com.haoxt.agent.adapter.HomeGridAdepter;
 import com.haoxt.agent.activity.home.serviceprovider.ServiceProviderActivity;
+import com.haoxt.agent.activity.home.terminalmanagement.TerminalHomeActivity;
+import com.haoxt.agent.adapter.HomeGridAdepter;
 import com.haoxt.agent.application.AppApplication;
 import com.haoxt.agent.entity.HomeMenu;
 import com.haoxt.agent.util.HttpRequest;
@@ -151,7 +152,7 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
                     startActivity(new Intent(getActivity(),MerchantQueryActivity.class));
                     break;
                 case "TERMINAL"://终端查询
-                    showShortToast("终端查询");
+                    startActivity(new Intent(getActivity(), TerminalHomeActivity.class));
                     break;
                 case "TRANSACTION"://交易管理
                     showShortToast("交易管理");

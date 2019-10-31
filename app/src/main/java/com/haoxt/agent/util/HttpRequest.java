@@ -14,12 +14,12 @@ limitations under the License.*/
 
 package com.haoxt.agent.util;
 
+import com.haoxt.agent.application.AppApplication;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.haoxt.agent.application.AppApplication;
 
 import tft.mpos.library.interfaces.OnHttpResponseListener;
 import tft.mpos.library.manager.HttpManager;
@@ -59,6 +59,7 @@ public class HttpRequest {
 
 	public static final String PHONE = "phone";
 	public static final String PASSWORD = "password";
+	static String token =  AppApplication.getInstance().getToken();
 
 
 	/**翻译，根据有道翻译API文档请求
@@ -830,5 +831,14 @@ public class HttpRequest {
 		}
 	}
 
+	/**
+	 * 终端解绑
+	 * @param map
+	 * @param requestCode
+	 * @param listener
+	 */
+	public static void terNnbound(Map<String, Object> map,int requestCode, final OnHttpResponseListener listener) {
+		HttpManager.getInstance().get(token,map,URL_BASE+"/tms/appTmststock/unBind",requestCode,listener);
+	}
 
 }
