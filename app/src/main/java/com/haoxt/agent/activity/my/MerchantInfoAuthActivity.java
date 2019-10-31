@@ -13,7 +13,6 @@ import tft.mpos.library.base.BaseActivity;
 
 /** 添加商户信息 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class MerchantInfoAuthActivity extends BaseActivity implements OnClickListener {
 	private static final String TAG = "SettingActivity";

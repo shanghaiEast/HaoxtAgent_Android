@@ -30,7 +30,6 @@ import tft.mpos.library.util.StringUtil;
  * 实名认证 Activity
  *
  * @author baowen
- * @use toActivity(SettingActivity.createIntent ( ...));
  */
 public class RealNameAuthenticationActivity extends BaseActivity implements OnClickListener ,RadioGroup.OnCheckedChangeListener {
     private static final String TAG = "SettingActivity";

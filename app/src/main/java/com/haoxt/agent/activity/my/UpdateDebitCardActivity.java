@@ -20,10 +20,8 @@ import tft.mpos.library.util.StringUtil;
 
 /** 更改结算卡信息 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class UpdateDebitCardActivity extends BaseActivity implements OnClickListener {
-	private static final String TAG = "SettingActivity";
 
 	//启动方法<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

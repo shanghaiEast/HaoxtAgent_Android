@@ -25,7 +25,6 @@ import tft.mpos.library.util.StringUtil;
 
 /** 信用卡认证 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class CreditcardVerifedActivity extends BaseActivity implements OnClickListener {
 	private static final String TAG = "CreditcardVerifedActivity";

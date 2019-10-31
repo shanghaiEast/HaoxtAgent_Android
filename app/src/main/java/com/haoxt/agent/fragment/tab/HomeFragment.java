@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 
 import com.haoxt.agent.R;
+import com.haoxt.agent.activity.home.achievement_manage.AchievementManageActivity;
 import com.haoxt.agent.activity.home.merchantquery.MerchantQueryActivity;
 import com.haoxt.agent.adapter.HomeGridAdepter;
 import com.haoxt.agent.activity.home.serviceprovider.ServiceProviderActivity;
@@ -124,7 +125,9 @@ public class HomeFragment extends BaseFragment implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_profit_more://我的收益更多
-                showShortToast("我的收益");
+//                showShortToast("我的收益");
+                toActivity(AchievementManageActivity.createIntent(getActivity()));
+
                 break;
             case R.id.tv_transaction_more://交易数据汇总更多
                 showShortToast("交易数据汇总");

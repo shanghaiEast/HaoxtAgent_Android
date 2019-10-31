@@ -40,9 +40,8 @@ import tft.mpos.library.interfaces.OnHttpResponseListener;
 import tft.mpos.library.ui.AlertDialog.OnDialogButtonClickListener;
 import tft.mpos.library.util.StringUtil;
 
-/**设置fragment
- * @author Lemon
- * @use new SettingFragment(),详细使用见.DemoFragmentActivity(initData方法内)
+/**我的fragment
+ * @author bawen
  */
 public class SettingFragment extends BaseFragment implements OnClickListener, OnDialogButtonClickListener {
 

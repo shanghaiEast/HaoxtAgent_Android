@@ -17,10 +17,8 @@ import tft.mpos.library.util.StringUtil;
 
 /**服务器设置activity
  * @author baowen
- * @use toActivity(ServerSettingActivity.createIntent(...));
  */
 public class ServerSettingActivity extends BaseActivity implements OnClickListener, OnBottomDragListener {
-	//	private static final String TAG = "ServerSettingActivity";
 
 	//启动方法<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

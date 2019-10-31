@@ -22,7 +22,6 @@ import tft.mpos.library.base.BaseActivity;
 
 /** 提现明细列表 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class CashWithdrawalListActivity extends BaseActivity  implements View.OnClickListener ,CashWithdrawalDetailListAdapter.OnItemClickListener {
 	private static final String TAG = "CashWithdrawalDetailActivity";

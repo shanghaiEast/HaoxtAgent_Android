@@ -53,7 +53,6 @@
         android:layout_marginTop="-35dp"
         android:background="@drawable/bg_shadow_white"
         android:layout_below="@+id/ll_profit_header"
-
         android:layout_marginLeft="@dimen/dimen_17"
         android:layout_marginRight="@dimen/dimen_17"
         android:gravity="center_vertical"

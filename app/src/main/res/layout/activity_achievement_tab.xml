@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/activity_page">
+
+    <RelativeLayout
+        android:id="@+id/rlBottomTabTopbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:visibility="visible">
+
+        <ImageButton style="@style/topbar_return_img1"
+            android:onClick="onReturnClick"/>
+
+        <TextView
+            android:id="@+id/tx_achievement_title"
+            style="@style/topbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:text="业绩" />
+
+        <TextView
+            android:id="@+id/tx_achievement_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dimen_20"
+            android:textColor="#666666"
+            android:textSize="@dimen/dimen_15"
+            android:text="筛选" />
+
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/achievement_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="34dip"
+        android:background="@color/white"
+        app:tabBackground="@color/white"
+        app:tabGravity="fill"
+        app:tabIndicatorHeight="0dip"
+        app:tabMinWidth="40dip"
+        app:tabMode="fixed"
+        app:tabPaddingEnd="5dip"
+        app:tabPaddingStart="5dip"
+        app:tabSelectedTextColor="#C29F56"
+        app:tabTextAppearance="@style/tab_head"
+        app:tabTextColor="@color/black" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/achievement_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/white" />
+</LinearLayout>

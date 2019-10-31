@@ -15,10 +15,8 @@ import tft.mpos.library.base.BaseActivity;
 
 /** 提现 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class CashWithdrawalActivity extends BaseActivity implements OnClickListener {
-	private static final String TAG = "SettingActivity";
 
 	//启动方法<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

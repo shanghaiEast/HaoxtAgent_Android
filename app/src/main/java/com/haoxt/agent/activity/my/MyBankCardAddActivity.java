@@ -34,7 +34,6 @@ import tft.mpos.library.util.StringUtil;
  * 绑定银行卡 Activity
  *
  * @author baowen
- * @use toActivity(SettingActivity.createIntent ( ...));
  */
 public class MyBankCardAddActivity extends BaseActivity implements OnClickListener {
     private static final int REQUEST_TO_PLACE_PICKER = 32,FORMBANKSEARCH = 1002,FORMBANKSEARCHBASE = 1000;

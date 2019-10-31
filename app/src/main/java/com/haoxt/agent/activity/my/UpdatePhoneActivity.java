@@ -20,10 +20,8 @@ import tft.mpos.library.util.StringUtil;
 
 /** 修改手机号 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class UpdatePhoneActivity extends BaseActivity implements OnClickListener {
-	private static final String TAG = "SettingActivity";
 
 	//启动方法<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

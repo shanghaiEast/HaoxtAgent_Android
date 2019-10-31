@@ -145,45 +145,54 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
             @Override
             public void onHttpResponse(int requestCode, String resultJson, Exception e) {
 
-                Map<String, Object> dataMap =  StringUtil.json2map(resultJson);
-                Map<String, Object>  userData = (Map<String, Object>) dataMap.get("rspMap");
+                Intent intent = MainTabActivity.createIntent(context);
+//                intent.putExtra("pageData",(Serializable)userData);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
 
-                if("000000".equals(dataMap.get("rspCd").toString())){
+                overridePendingTransition(R.anim.bottom_push_in, R.anim.hold);
+                enterAnim = exitAnim = R.anim.null_anim;
+                finish();
 
-                    AppApplication.getInstance().setToken(userData.get("TOKEN_ID").toString());
-                    AppApplication.getInstance().isLogin = true;
-
-                    AppApplication.getInstance().setUserno(userData.get("USRUNO")==null?"":userData.get("USRUNO").toString());
-
-                    AppApplication.getInstance().setUserStatus(userData.get("USR_STATUS")==null?"":userData.get("USR_STATUS").toString());
-                    AppApplication.getInstance().setRealNameStatus(userData.get("USR_REAL_STS")==null?"":userData.get("USR_REAL_STS").toString());
-                    AppApplication.getInstance().setUserStlStatus(userData.get("USR_STL_STS")==null?"":userData.get("USR_STL_STS").toString());
-                    AppApplication.getInstance().setUserTermStatus(userData.get("USR_TERM_STS")==null?"":userData.get("USR_TERM_STS").toString());
-                    AppApplication.getInstance().setUserCreditCardStatus(userData.get("CCARD_VALID_STS")==null?"":userData.get("CCARD_VALID_STS").toString());
-
-                    String blueTooth = userData.get("BLUE_TOOTH")==null?"":userData.get("BLUE_TOOTH").toString();
-                    if (!blueTooth.equals("")){
-                        String[] blueToothArray=blueTooth.split(",");
-                        if (blueToothArray.length==2){
-                            AppApplication.getInstance().setBluetooth(blueToothArray[0]);
-                            AppApplication.getInstance().setMac(blueToothArray[1]);
-                        }else{
-                            AppApplication.getInstance().setBluetooth(blueToothArray[0]);
-                        }
-                    }
-
-                    Intent intent = MainTabActivity.createIntent(context);
-                    intent.putExtra("pageData",(Serializable)userData);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    startActivity(intent);
-
-                    overridePendingTransition(R.anim.bottom_push_in, R.anim.hold);
-                    enterAnim = exitAnim = R.anim.null_anim;
-                    finish();
-
-                }else{
-                    showShortToast("登陆失败");
-                }
+//                Map<String, Object> dataMap =  StringUtil.json2map(resultJson);
+//                Map<String, Object>  userData = (Map<String, Object>) dataMap.get("rspMap");
+//
+//                if("000000".equals(dataMap.get("rspCd").toString())){
+//
+//                    AppApplication.getInstance().setToken(userData.get("TOKEN_ID").toString());
+//                    AppApplication.getInstance().isLogin = true;
+//
+//                    AppApplication.getInstance().setUserno(userData.get("USRUNO")==null?"":userData.get("USRUNO").toString());
+//
+//                    AppApplication.getInstance().setUserStatus(userData.get("USR_STATUS")==null?"":userData.get("USR_STATUS").toString());
+//                    AppApplication.getInstance().setRealNameStatus(userData.get("USR_REAL_STS")==null?"":userData.get("USR_REAL_STS").toString());
+//                    AppApplication.getInstance().setUserStlStatus(userData.get("USR_STL_STS")==null?"":userData.get("USR_STL_STS").toString());
+//                    AppApplication.getInstance().setUserTermStatus(userData.get("USR_TERM_STS")==null?"":userData.get("USR_TERM_STS").toString());
+//                    AppApplication.getInstance().setUserCreditCardStatus(userData.get("CCARD_VALID_STS")==null?"":userData.get("CCARD_VALID_STS").toString());
+//
+//                    String blueTooth = userData.get("BLUE_TOOTH")==null?"":userData.get("BLUE_TOOTH").toString();
+//                    if (!blueTooth.equals("")){
+//                        String[] blueToothArray=blueTooth.split(",");
+//                        if (blueToothArray.length==2){
+//                            AppApplication.getInstance().setBluetooth(blueToothArray[0]);
+//                            AppApplication.getInstance().setMac(blueToothArray[1]);
+//                        }else{
+//                            AppApplication.getInstance().setBluetooth(blueToothArray[0]);
+//                        }
+//                    }
+//
+//                    Intent intent = MainTabActivity.createIntent(context);
+//                    intent.putExtra("pageData",(Serializable)userData);
+//                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//                    startActivity(intent);
+//
+//                    overridePendingTransition(R.anim.bottom_push_in, R.anim.hold);
+//                    enterAnim = exitAnim = R.anim.null_anim;
+//                    finish();
+//
+//                }else{
+//                    showShortToast("登陆失败");
+//                }
 
             }
         });

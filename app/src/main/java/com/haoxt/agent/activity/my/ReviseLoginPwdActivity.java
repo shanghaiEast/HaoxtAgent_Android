@@ -19,10 +19,8 @@ import tft.mpos.library.util.StringUtil;
 
 /** 修改登陆密码 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class ReviseLoginPwdActivity extends BaseActivity implements OnClickListener {
-	private static final String TAG = "SettingActivity";
 
 	//启动方法<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 

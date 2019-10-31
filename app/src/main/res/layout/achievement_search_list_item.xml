@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_5"
+        android:padding="@dimen/dimen_15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_transactionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2019年5月20日"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总交易额"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/item_totalTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:text="35356335353"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <View style="@style/divider_horizontal_item_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总笔数"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/item_quantityTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:text="35356335353"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <View style="@style/divider_horizontal_item_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新增绑定"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/item_newAchievementTerminal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:text="35356335353"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <View style="@style/divider_horizontal_item_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在网商户"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/item_onlineMerchant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:text="35356335353"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <View style="@style/divider_horizontal_item_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="户均金额"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/item_averageAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:text="35356335353"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <View style="@style/divider_horizontal_item_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/dimen_15"
+        android:paddingLeft="@dimen/dimen_15"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="新增激活"
+            android:textSize="17sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/item_newActivation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/white"
+            android:gravity="center_vertical|right"
+            android:text="35356335353"
+            android:textColor="#999999"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <View style="@style/divider_horizontal_item_line" />
+
+
+</LinearLayout>

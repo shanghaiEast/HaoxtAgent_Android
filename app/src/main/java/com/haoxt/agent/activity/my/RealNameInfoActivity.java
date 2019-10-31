@@ -14,7 +14,6 @@ import tft.mpos.library.base.BaseActivity;
 
 /** 实名认证信息 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class RealNameInfoActivity extends BaseActivity implements OnClickListener {
 	private static final String TAG = "SettingActivity";

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_10"
+        android:layout_below="@+id/title_tv"
+        android:background="@color/gray_5" />
+
+    <LinearLayout
+        android:layout_below="@id/line1"
+        android:id="@+id/achievement_search_header_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="终端数量"
+                android:textSize="17sp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/achievement_search_header_terminal_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center_vertical|right"
+                android:text="YT"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View style="@style/divider_horizontal_item_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开通率"
+                android:textSize="17sp"
+                android:layout_weight="1"
+                />
+
+            <TextView
+                android:id="@+id/achievement_search_header_terminal_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:gravity="center_vertical|right"
+                android:text="YT"
+                android:textColor="#999999"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View style="@style/divider_horizontal_item_line" />
+
+    </LinearLayout>
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/dimen_15"
+        android:paddingRight="@dimen/dimen_15"
+        android:layout_below="@+id/achievement_search_header_msg">
+
+        <TextView
+            android:id="@+id/achievement_search_no_data_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@mipmap/nodata_bg"
+            android:drawablePadding="@dimen/dimen_11"
+            android:gravity="center_horizontal"
+            android:text="@string/no_msg"
+            android:textColor="@color/no_data_color"
+            android:textSize="@dimen/font_12"
+            android:visibility="invisible" />
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/achievement_search_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</RelativeLayout>

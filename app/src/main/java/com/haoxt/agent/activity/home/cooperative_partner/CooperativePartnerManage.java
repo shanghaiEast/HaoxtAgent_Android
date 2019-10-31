@@ -20,7 +20,6 @@ import tft.mpos.library.util.StringUtil;
 
 /** 商户信息 Activity
  * @author baowen
- * @use toActivity(SettingActivity.createIntent(...));
  */
 public class CooperativePartnerManage extends BaseActivity implements OnClickListener {
 	private static final String TAG = "SettingActivity";
